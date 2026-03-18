@@ -38,7 +38,7 @@ services:
       start_period: 60s
 
   gitea-runner:
-    image: gitea/act_runner:latest
+    image: gitea/act_runner:0.2.11
     container_name: gitea-runner
     restart: unless-stopped
     depends_on:
@@ -73,7 +73,7 @@ services:
       - SMTP_FROM=${SMTP_FROM}
       - SMTP_USERNAME=${SMTP_USER}
       - SMTP_PASSWORD=${SMTP_PASS}
-      - SMTP_SECURITY=starttls
+      - SMTP_SECURITY=${SMTP_SECURITY:-starttls}
     volumes:
       - vaultwarden-data:/data
     labels:
