@@ -183,5 +183,4 @@ volumes:
   gitea-data:
   gitea-runner-data:
   vaultwarden-data:
-  outline-data:
   bookstack-data:
