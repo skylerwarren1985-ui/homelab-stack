@@ -19,6 +19,7 @@ services:
       - GITEA__server__HTTP_PORT=3000
       - GITEA__security__INSTALL_LOCK=true
       - GITEA__mailer__ENABLED=false
+      - GITEA__mailer__PROTOCOL=${SMTP_SECURITY:-starttls}
       - GITEA__oauth2__ENABLE=true
       - GITEA__oauth2__JWT_SECRET=${GITEA_OAUTH2_JWT_SECRET}
       - GITEA__service__DISABLE_REGISTRATION=true
